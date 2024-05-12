@@ -11,6 +11,7 @@ import todoLogo from './check-mark.png'
 import codepen from './codepen.png'
 import myLogo from './Anshuman Studios.png'
 import rps from './rock-paper-scissors.png'
+import weatherLogo from './weatherIcon.png'
 
 import aashirvaadWeb from './aashirvaad home.png'
 import khojWeb from './ss_kb.jpeg'
@@ -26,10 +27,12 @@ import periodWeb from './periodic.jpeg'
 import portWeb from './anshu-pc.netlify.app_.png'
 import rpsWeb from './a-rpsweb.png'
 import portfolio from './portfolio.png'
+import weatherWeb from './weatherWeb.png'
 
 import me from './8.png'
 import anst from './Anshuman Studios.svg'
 import c4d from './icons8-cinema-4d.svg'
+import { nextui } from '@nextui-org/react'
 
 export const logos = {
     aashirvaadLogo,
@@ -45,6 +48,7 @@ export const logos = {
     codepen,
     myLogo,
     rps,
+    weatherLogo,
 };
 
 export const web = {
@@ -62,6 +66,7 @@ export const web = {
     portWeb,
     rpsWeb,
     portfolio,
+    weatherWeb,
 };
 
 export const lang = {
@@ -100,6 +105,8 @@ export const lang = {
     tailwind: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg',
     tensorflow: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg',
     framer: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/framermotion/framermotion-original.svg',
+    next: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+    nextJS: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original-wordmark.svg"
 }
 
 export const images = {

@@ -6,6 +6,7 @@ import { images, lang } from '../../assets/assets';
 import XIcon from '@mui/icons-material/X';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkIcon from '@mui/icons-material/Link';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Chip from '@mui/material/Chip';
 import { Filter, Opacity } from "@mui/icons-material";
 
@@ -16,7 +17,7 @@ const Skills = forwardRef((props, ref) => {
     };
 
     const links = {
-        insta: 'https://www.instagram.com/anshu_man_man/',
+        linkedin: 'https://www.linkedin.com/in/anshuman-bhardwaj-89476b23b',
         twitter: 'https://x.com/A_nshuman',
         web: 'https://anshu-pc.netlify.app/'
     }
@@ -71,7 +72,7 @@ const Skills = forwardRef((props, ref) => {
                     </div>
 
                     <div className="social">
-                        <InstagramIcon className="icon" onClick={() => clickHandler(links.insta)} />
+                        <LinkedInIcon className="icon" onClick={() => clickHandler(links.linkedin)} />
                         <XIcon className="icon" onClick={() => clickHandler(links.twitter)} />
                         <LinkIcon className="icon" onClick={() => clickHandler(links.web)} />
                     </div>
@@ -139,6 +140,11 @@ const Skills = forwardRef((props, ref) => {
                     <div className="skillCard">
                         <img src={lang.typescript} />
                         <h3>Typescript</h3>
+                    </div>
+                    
+                    <div className="skillCard">
+                        <img src={lang.next} />
+                        <h3>Next.JS</h3>
                     </div>
 
                     <div className="skillCard">

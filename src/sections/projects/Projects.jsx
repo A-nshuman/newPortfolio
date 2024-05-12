@@ -31,7 +31,8 @@ const urls = {
     bmi: "https://abmicalc.netlify.app/",
     port: "https://anshu-pc.netlify.app/",
     rps: 'https://a-rps.netlify.app/',
-    portfolio: 'https://anshuport.netlify.app/'
+    portfolio: 'https://anshuport.netlify.app/',
+    weatherapp: 'https://weather-by-as.netlify.app/'
 };
 
 
@@ -45,6 +46,35 @@ const Projects = forwardRef((props, ref) => {
 
             <div className="projCont">
 
+
+                <div className="card" id="anshuai" onClick={() => clickHandler(urls.weatherapp)}>
+                    <OpenInNewIcon className="openIcon" />
+                    <div className="bgImg">
+                        <img src={web.weatherWeb} alt="" />
+                    </div>
+                    <Fab className="webLogo">
+                        <img src={logos.weatherLogo} alt="" />
+                    </Fab>
+                    <div className="content">
+                        <h2 className="title">Weather App</h2>
+                        <div className="contentImgs">
+                            <div className="img">
+                                <img src={lang.next} alt="next logo" />
+                                <p>
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original-wordmark.svg" style={{ translate: '0 20px 0', filter: 'invert(1)' }} />
+                                </p>
+                            </div>
+                            <div className="img">
+                                <img src={lang.typescript} alt="typescript logo" />
+                                <p>Typescript</p>
+                            </div>
+                            <div className="img">
+                                <img src={lang.tailwind} alt="tailwind logo" />
+                                <p>Tailwind</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <div className="card" id="anshuai" onClick={() => clickHandler(urls.aia)} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
                     <OpenInNewIcon className="openIcon" />
@@ -73,7 +103,7 @@ const Projects = forwardRef((props, ref) => {
                     </div>
                 </div>
 
-                <div className="card" id="rps" onClick={() => clickHandler(urls.rps)} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+                <div className="card" id="rps" onClick={() => clickHandler(urls.rps)}>
                     <OpenInNewIcon className="openIcon" />
                     <div className="bgImg">
                         <img src={web.rpsWeb} alt="" />
@@ -126,7 +156,7 @@ const Projects = forwardRef((props, ref) => {
                         </div>
                     </div>
                 </div>
-                
+
                 <div className="card" id="todolist" onClick={() => clickHandler(urls.todo)}>
                     <OpenInNewIcon className="openIcon" />
                     <div className="bgImg">
