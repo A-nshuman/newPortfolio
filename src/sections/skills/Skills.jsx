@@ -153,6 +153,11 @@ const Skills = forwardRef((props, ref) => {
                     </div>
 
                     <div className="skillCard">
+                        <img src={lang.nativeWind} />
+                        <h3 style={{ fontSize: '17px' }}>NativeWind</h3>
+                    </div>
+
+                    <div className="skillCard">
                         <img src={lang.python} />
                         <h3>Python</h3>
                     </div>
