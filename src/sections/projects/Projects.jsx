@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect, forwardRef } from "react";
 import { motion } from "framer-motion"
 
 import './Projects.css';
+import projectCard from "../../components/projectCard";
 
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import CodeIcon from '@mui/icons-material/Code';
@@ -32,7 +33,8 @@ const urls = {
     port: "https://anshu-pc.netlify.app/",
     rps: 'https://a-rps.netlify.app/',
     portfolio: 'https://anshuport.netlify.app/',
-    weatherapp: 'https://weather-by-as.netlify.app/'
+    weatherapp: 'https://weather-by-as.netlify.app/',
+    creditCard: 'https://credit-card-validator-two.vercel.app/',
 };
 
 
@@ -46,8 +48,36 @@ const Projects = forwardRef((props, ref) => {
 
             <div className="projCont">
 
+            <div className="card" id="creditCardValid" onClick={() => clickHandler(urls.creditCard)}>
+                    <OpenInNewIcon className="openIcon" />
+                    <div className="bgImg">
+                        <img src={web.creditCard} alt="" />
+                    </div>
+                    <Fab className="webLogo">
+                        <img src={logos.aashirvaadLogo} alt="" />
+                    </Fab>
+                    <div className="content">
+                        <h2 className="title">Credit Card Validator</h2>
+                        <div className="contentImgs">
+                            <div className="img">
+                                <img src={lang.next} alt="next logo" />
+                                <p>
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original-wordmark.svg" style={{ translate: '0 20px 0', filter: 'invert(1)' }} />
+                                </p>
+                            </div>
+                            <div className="img">
+                                <img src={lang.typescript} alt="typescript logo" />
+                                <p>Typescript</p>
+                            </div>
+                            <div className="img">
+                                <img src={lang.tailwind} alt="tailwind logo" />
+                                <p>Tailwind</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                <div className="card" id="anshuai" onClick={() => clickHandler(urls.weatherapp)}>
+                <div className="card" id="weatherApp" onClick={() => clickHandler(urls.weatherapp)}>
                     <OpenInNewIcon className="openIcon" />
                     <div className="bgImg">
                         <img src={web.weatherWeb} alt="" />

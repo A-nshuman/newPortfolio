@@ -28,6 +28,7 @@ import portWeb from './anshu-pc.netlify.app_.png'
 import rpsWeb from './a-rpsweb.png'
 import portfolio from './portfolio.png'
 import weatherWeb from './weatherWeb.png'
+import creditCard from './creditCardWeb.png'
 
 import me from './8.png'
 import anst from './Anshuman Studios.svg'
@@ -67,6 +68,7 @@ export const web = {
     rpsWeb,
     portfolio,
     weatherWeb,
+    creditCard,
 };
 
 export const lang = {
