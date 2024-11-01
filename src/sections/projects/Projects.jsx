@@ -33,7 +33,7 @@ const urls = {
     port: "https://anshu-pc.netlify.app/",
     rps: 'https://a-rps.netlify.app/',
     portfolio: 'https://anshuport.netlify.app/',
-    weatherapp: 'https://weather-by-as.netlify.app/',
+    weatherapp: 'https://weather-by-as.vercel.app/',
     creditCard: 'https://credit-card-validator-two.vercel.app/',
 };
 
