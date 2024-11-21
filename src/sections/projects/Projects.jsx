@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect, forwardRef } from "react";
 import { motion } from "framer-motion"
 
 import './Projects.css';
-import projectCard from "../../components/projectCard";
 
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import CodeIcon from '@mui/icons-material/Code';
@@ -11,7 +10,7 @@ import { Fab, Box, Divider, Tooltip, duration } from '@mui/material';
 import { logos, web, lang, images } from '../../assets/assets';
 
 import { useSpring, animated } from "@react-spring/web";
-import { transform } from "typescript";
+// import { transform } from "typescript";
 import { image } from "@nextui-org/react";
 import LandingPage from "../landingPage/Landing";
 
@@ -30,7 +29,7 @@ const urls = {
     currency: "https://a-currency.netlify.app/",
     samay: "https://samaysathi.netlify.app/",
     bmi: "https://abmicalc.netlify.app/",
-    port: "https://anshu-pc.netlify.app/",
+    port: "https://a-pc.netlify.app/",
     rps: 'https://a-rps.netlify.app/',
     portfolio: 'https://anshuport.netlify.app/',
     weatherapp: 'https://weather-by-as.vercel.app/',

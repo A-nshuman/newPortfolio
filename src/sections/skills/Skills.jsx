@@ -19,7 +19,7 @@ const Skills = forwardRef((props, ref) => {
     const links = {
         linkedin: 'https://www.linkedin.com/in/anshuman-bhardwaj-89476b23b',
         twitter: 'https://x.com/A_nshuman',
-        web: 'https://anshu-pc.netlify.app/'
+        web: 'https://anshuman.me/'
     }
 
     useEffect(() => {
@@ -105,7 +105,7 @@ const Skills = forwardRef((props, ref) => {
                                     <h5 className="h52">Designer</h5>
                                     <h5 className="h53">Animator</h5>
                                 </div>
-                                <p className="des">Student at <span>IIT Delhi</span></p>
+                                <p className="des">Student at <span>NIT Jalandhar</span></p>
                             </div>
 
                         </div>
