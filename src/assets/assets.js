@@ -12,11 +12,7 @@ import codepen from './codepen.png'
 import myLogo from './Anshuman Studios.png'
 import rps from './rock-paper-scissors.png'
 import weatherLogo from './weatherIcon.png'
-<<<<<<< HEAD
 import trustguardLogo from './TGlogo.png'
-=======
-import trustguardLogo from './trustguardLogo.png'
->>>>>>> 3a8531e (Trustguard)
 
 import aashirvaadWeb from './aashirvaad home.png'
 import khojWeb from './ss_kb.jpeg'
@@ -34,11 +30,7 @@ import rpsWeb from './a-rpsweb.png'
 import portfolio from './portfolio.png'
 import weatherWeb from './weatherWeb.png'
 import creditCard from './creditCardWeb.png'
-<<<<<<< HEAD
 import trustguard from './TGss.png'
-=======
-import trustGuard from './tgss.png'
->>>>>>> 3a8531e (Trustguard)
 
 import me from './8.png'
 import anst from './Anshuman Studios.svg'
@@ -80,11 +72,7 @@ export const web = {
     portfolio,
     weatherWeb,
     creditCard,
-<<<<<<< HEAD
     trustguard,
-=======
-    trustGuard,
->>>>>>> 3a8531e (Trustguard)
 };
 
 export const lang = {
