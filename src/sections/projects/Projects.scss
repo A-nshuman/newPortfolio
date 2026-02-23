@@ -229,3 +229,234 @@ $white: #f4ebd9;
         }
     }
 }
+$dark: #202020;
+$light: #2b2b2b;
+$white: #f4ebd9;
+
+@mixin dispFlex($direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin dispGrid() {
+    display: grid;
+    place-items: center;
+}
+
+.projects {
+    margin-top: 70px;
+    @include dispFlex(column, start, center);
+    gap: 20px;
+    background: $dark;
+    width: 100%;
+    height: fit-content;
+    padding-block: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    h1 {
+        color: $white;
+        text-align: center;
+    }
+
+    .projCont {
+        // @include dispGrid();
+        // grid-template-columns: repeat(3, 1fr);
+        @include dispFlex(row, center, center);
+        flex-wrap: wrap;
+        gap: 20px;
+
+        .card {
+            width: 300px;
+            height: 384px;
+            @include dispFlex(column, center, center);
+            overflow: hidden;
+            border-radius: 10px;
+            position: relative;
+            border: 2px solid $light;
+            cursor: pointer;
+
+            &:hover {
+                .openIcon {
+                    opacity: 1;
+                }
+
+                .bgImg {
+                    scale: 1.1;
+                    filter: grayscale(0);
+                }
+
+                .content .contentImgs .img {
+
+                    &:nth-child(1) {
+                        transform: translateY(-10px);
+                        transition-delay: 0ms;
+
+                        p {
+                            opacity: 1;
+                            transition: opacity 0.2s ease;
+                            transition-delay: 0ms;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        transform: translateY(-10px);
+                        transition-delay: 100ms;
+
+                        p {
+                            opacity: 1;
+                            transition: opacity 0.2s ease;
+                            transition-delay: 100ms;
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        transform: translateY(-10px);
+                        transition-delay: 200ms;
+
+                        p {
+                            opacity: 1;
+                            transition: opacity 0.2s ease;
+                            transition-delay: 200ms;
+                        }
+                    }
+                }
+            }
+
+            .openIcon {
+                opacity: 0;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                z-index: 2;
+                background-color: $white;
+                color: invert($white);
+                border-radius: 10px;
+                padding: 5px;
+                font-size: medium;
+                transition: all 0.2s ease;
+            }
+
+            .bgImg {
+                width: 100%;
+                height: 50%;
+                z-index: 0;
+                filter: grayscale(1);
+                -webkit-mask: linear-gradient(0deg, transparent 0%, white 100%);
+                mask: linear-gradient(0deg, transparent 0%, white 100%);
+
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .webLogo {
+                width: 75px;
+                height: 75px;
+                position: absolute;
+                // padding: 5px;
+                border-radius: 50%;
+                background-color: $dark;
+                @include dispGrid();
+                z-index: 2;
+                border: 5px solid $light;
+                box-shadow: none;
+
+                img {
+                    width: 100%;
+                    border-radius: 50%;
+                }
+
+                .noLogo {
+                    color: $white;
+                    font-size: 40px;
+                }
+            }
+
+            .profPic {
+                position: absolute;
+                padding: 5px;
+                border-radius: 50%;
+                background-color: $light;
+                @include dispGrid();
+                z-index: 2;
+
+                img {
+                    width: 75px;
+                    border-radius: 50%;
+                }
+            }
+
+            .content {
+                @include dispFlex(column, center, center);
+                gap: 20px;
+                width: 100%;
+                height: 50%;
+                background-color: $light;
+                z-index: 1;
+                color: $white;
+
+                .contentImgs {
+                    @include dispFlex(row, center, center);
+                    gap: 20px;
+                    // perspective: 1000px;
+                    
+                    .img {
+                        @include dispGrid();
+                        position: relative;
+                        
+                        &:nth-child(1) {
+                            transition-delay: 0ms;
+                        }
+
+                        &:nth-child(2) {
+                            transition-delay: 100ms;
+                        }
+
+                        &:nth-child(3) {
+                            transition-delay: 200ms;
+                        }
+                        
+                        img {
+                            width: 50px;
+                        }
+                        
+                        p {
+                            color: $white;
+                            position: absolute;
+                            bottom: -20px;
+                            opacity: 0;
+                            font-family: "PT Sans Narrow", sans-serif;
+                            white-space: nowrap;
+                            
+                            &:nth-child(1) {
+                                transition-delay: 0ms;
+                            }
+
+                            &:nth-child(2) {
+                                transition-delay: 100ms;
+                            }
+
+                            &:nth-child(3) {
+                                transition-delay: 200ms;
+                            }
+                        }
+                    }
+
+                    & :where(#stylusLogo, #flaskLogo) {
+                        filter: invert(1);
+                    }
+
+                    @keyframes pOpacity {
+                        to {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

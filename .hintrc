@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "scale",
+          "height: fit-content",
+          "translate",
+          "user-select",
+          "rotate",
+          "width: fit-content",
+          "zoom"
+        ]
+      }
+    ]
+  }
+}
