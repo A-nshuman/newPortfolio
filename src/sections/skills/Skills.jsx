@@ -33,10 +33,6 @@ const Skills = forwardRef((props, ref) => {
         web: 'https://anshuman.me/'
     }
 
-<<<<<<< HEAD
-    const roles = ["Developer", "Designer", "Animator"];
-    const [currentRole, setCurrentRole] = useState(0);
-
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentRole((prev) => (prev + 1) % roles.length);
@@ -44,36 +40,6 @@ const Skills = forwardRef((props, ref) => {
 
         return () => clearInterval(interval);
     }, []);
-=======
-    // useEffect(() => {
-
-    //     const h51 = document.querySelector('.h51');
-    //     const h52 = document.querySelector('.h52');
-    //     const h53 = document.querySelector('.h53');
-
-    //     h51.addEventListener('animationend', () => {
-    //         h51.style.animation = 'none';
-    //         setTimeout(() => {
-    //             h51.style.animation = 'h3Anim 2s';
-    //         }, 2500);
-    //     });
-
-    //     h52.addEventListener('animationend', () => {
-    //         h52.style.animation = 'none';
-    //         setTimeout(() => {
-    //             h52.style.animation = 'h3Anim 2s';
-    //         }, 2500);
-    //     });
-
-    //     h53.addEventListener('animationend', () => {
-    //         h53.style.animation = 'none';
-    //         setTimeout(() => {
-    //             h53.style.animation = 'h3Anim 2s';
-    //         }, 2500);
-    //     });
-
-    // }, []);
->>>>>>> 3a8531e (Trustguard)
 
     return (
 
