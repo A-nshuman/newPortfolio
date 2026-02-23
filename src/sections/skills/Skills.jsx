@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect } from "react";
+import React, { forwardRef, useEffect, useState } from "react";
 import { motion } from "framer-motion"
 import './Skills.css';
 import { images, lang } from '../../assets/assets';
@@ -22,33 +22,15 @@ const Skills = forwardRef((props, ref) => {
         web: 'https://anshuman.me/'
     }
 
+    const roles = ["Developer", "Designer", "Animator"];
+    const [currentRole, setCurrentRole] = useState(0);
+
     useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentRole((prev) => (prev + 1) % roles.length);
+        }, 2000);
 
-        const h51 = document.querySelector('.h51');
-        const h52 = document.querySelector('.h52');
-        const h53 = document.querySelector('.h53');
-
-        h51.addEventListener('animationend', () => {
-            h51.style.animation = 'none';
-            setTimeout(() => {
-                h51.style.animation = 'h3Anim 2s';
-            }, 2500);
-        });
-
-        h52.addEventListener('animationend', () => {
-            h52.style.animation = 'none';
-            setTimeout(() => {
-                h52.style.animation = 'h3Anim 2s';
-            }, 2500);
-        });
-
-        h53.addEventListener('animationend', () => {
-            h53.style.animation = 'none';
-            setTimeout(() => {
-                h53.style.animation = 'h3Anim 2s';
-            }, 2500);
-        });
-
+        return () => clearInterval(interval);
     }, []);
 
     return (
@@ -86,24 +68,9 @@ const Skills = forwardRef((props, ref) => {
                             <div className="textContent">
                                 <h1 className="myName">Anshuman Bhardwaj</h1>
                                 <div className="text-wrapper">
-                                    {/* <motion.h5
-                                        initial={{ opacity: 0, translate: '0 10px 0' }}
-                                        animate={{ opacity: [0, 1, 0], translate: ['0 0 0', '0 0 0', '0 -10px 0'] }}
-                                        transition={{ duration: 2, times: [0, 0.5, 1], repeat: Infinity, delay: 0}}
-                                    >Developer</motion.h5>
-                                    <motion.h5
-                                        initial={{ opacity: 0, translate: '0 10px 0' }}
-                                        animate={{ opacity: [0, 1, 0], translate: ['0 0 0', '0 0 0', '0 -10px 0'] }}
-                                        transition={{ duration: 2, times: [0, 0.5, 1], repeat: Infinity, delay: 1}}
-                                    >Designer</motion.h5>
-                                    <motion.h5
-                                        initial={{ opacity: 0, translate: '0 10px 0' }}
-                                        animate={{ opacity: [0, 1, 0], translate: ['0 0 0', '0 0 0', '0 -10px 0'] }}
-                                        transition={{ duration: 2, times: [0, 0.5, 1], repeat: Infinity, delay: 2}}
-                                    >Animator</motion.h5> */}
-                                    <h5 className="h51">Developer</h5>
-                                    <h5 className="h52">Designer</h5>
-                                    <h5 className="h53">Animator</h5>
+                                    <h5 key={currentRole} className="role">
+                                        {roles[currentRole]}
+                                    </h5>
                                 </div>
                                 <p className="des">Student at <span>NIT Jalandhar</span></p>
                             </div>
@@ -116,7 +83,7 @@ const Skills = forwardRef((props, ref) => {
                         </p>
 
                         <div align="center" className="trophies">
-                            <img src="https://github-profile-trophy.vercel.app/?username=A-nshuman&theme=gitdimmed&rank=A,AA,AAA&column=3" />
+                            <img src="https://github-trophies.vercel.app/?username=A-nshuman&theme=dark_lover&no-frame=false&no-bg=false&margin-w=4&column=3&row=1" />
                         </div>
 
                     </div>
@@ -141,7 +108,7 @@ const Skills = forwardRef((props, ref) => {
                         <img src={lang.typescript} />
                         <h3>Typescript</h3>
                     </div>
-                    
+
                     <div className="skillCard">
                         <img src={lang.next} />
                         <h3>Next.JS</h3>

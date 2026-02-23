@@ -34,6 +34,7 @@ const urls = {
     portfolio: 'https://anshuport.netlify.app/',
     weatherapp: 'https://weather-by-as.vercel.app/',
     creditCard: 'https://credit-card-validator-two.vercel.app/',
+    trustGuard: 'https://trust-guard-eta.vercel.app/',
 };
 
 
@@ -47,7 +48,34 @@ const Projects = forwardRef((props, ref) => {
 
             <div className="projCont">
 
-            <div className="card" id="creditCardValid" onClick={() => clickHandler(urls.creditCard)}>
+                <div className="card" id="trustguard" onClick={() => clickHandler(urls.trustGuard)}>
+                    <OpenInNewIcon className="openIcon" />
+                    <div className="bgImg">
+                        <img src={web.trustguard} alt="" />
+                    </div>
+                    <Fab className="webLogo">
+                        <img src={logos.trustguardLogo} alt="" />
+                    </Fab>
+                    <div className="content">
+                        <h2 className="title">TrustGuard</h2>
+                        <div className="contentImgs">
+                            <div className="img">
+                                <img src={lang.react} alt="react logo" />
+                                <p>React</p>
+                            </div>
+                            <div className="img">
+                                <img src={lang.python} alt="python logo" />
+                                <p>Python</p>
+                            </div>
+                            <div className="img">
+                                <img src={lang.tailwind} alt="tailwind logo" />
+                                <p>Tailwind</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="card" id="creditCardValid" onClick={() => clickHandler(urls.creditCard)}>
                     <OpenInNewIcon className="openIcon" />
                     <div className="bgImg">
                         <img src={web.creditCard} alt="" />

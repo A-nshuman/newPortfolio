@@ -12,6 +12,7 @@ import codepen from './codepen.png'
 import myLogo from './Anshuman Studios.png'
 import rps from './rock-paper-scissors.png'
 import weatherLogo from './weatherIcon.png'
+import trustguardLogo from './TGlogo.png'
 
 import aashirvaadWeb from './aashirvaad home.png'
 import khojWeb from './ss_kb.jpeg'
@@ -29,6 +30,7 @@ import rpsWeb from './a-rpsweb.png'
 import portfolio from './portfolio.png'
 import weatherWeb from './weatherWeb.png'
 import creditCard from './creditCardWeb.png'
+import trustguard from './TGss.png'
 
 import me from './8.png'
 import anst from './Anshuman Studios.svg'
@@ -50,6 +52,7 @@ export const logos = {
     myLogo,
     rps,
     weatherLogo,
+    trustguardLogo,
 };
 
 export const web = {
@@ -69,6 +72,7 @@ export const web = {
     portfolio,
     weatherWeb,
     creditCard,
+    trustguard,
 };
 
 export const lang = {
