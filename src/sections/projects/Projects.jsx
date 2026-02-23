@@ -13,6 +13,7 @@ import { useSpring, animated } from "@react-spring/web";
 // import { transform } from "typescript";
 import { image } from "@nextui-org/react";
 import LandingPage from "../landingPage/Landing";
+import { WidthFull } from "@mui/icons-material";
 
 const clickHandler = (url) => {
     window.open(`${url}`, '_blank')

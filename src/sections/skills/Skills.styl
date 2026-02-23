@@ -223,42 +223,51 @@ dispGrid()
                         text-transform uppercase
 
                     .text-wrapper
-                        height 20px
+                        height 22px
                         position relative
+                        overflow hidden
 
-                        h5
-                            position absolute
-                            translate 0 0 0
-                            opacity 0
-                            font-weight 500
+                    .role
+                        animation fadeSlide 0.4s ease
 
-                            &:nth-child(1)
-                                animation h3Anim 2s
+                            h5:nth-child(1)
                                 animation-delay 0s
 
-                            &:nth-child(2)
-                                animation h3Anim 2s
-                                animation-delay 1.5s
+                            h5:nth-child(2)
+                                animation-delay 2s
 
-                            &:nth-child(3)
-                                animation h3Anim 2s
-                                animation-delay 3s
+                            h5:nth-child(3)
+                                animation-delay 4s
 
-                            @keyframes h3Anim 
+                            @keyframes fadeSlide
                                 0%
+                                    opacity 0
                                     transform translateY(10px)
-                                    opacity 0
-                                25%
-                                    transform translateY(0px)
-                                    opacity 1
-                                75%
-                                    transform translateY(0px)
-                                    opacity 1
                                 100%
-                                    transform translateY(-10px)
-                                    opacity 0
-                            
+                                    opacity 1
+                                    transform translateY(0)
 
+                            @keyframes h3Anim
+                                0%
+                                    opacity 0
+                                    transform translateY(10px)
+
+                                10%
+                                    opacity 1
+                                    transform translateY(0)
+
+                                30%
+                                    opacity 1
+                                    transform translateY(0)
+
+                                40%
+                                    opacity 0
+                                    transform translateY(-10px)
+
+                                100%
+                                    opacity 0
+                                    transform translateY(-10px)
+                            
                     p
                         font-size small
 
